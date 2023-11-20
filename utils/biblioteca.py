@@ -1,22 +1,13 @@
 import os
-
-
-def porcentagem():
-    title = "Porcentagem"
-    texto = [
-        "Porcentagem é uma forma de expressar uma parte de um todo em termos percentuais.",
-        "Macete: Para calcular a porcentagem de um valor, multiplique o valor pela porcentagem e mova a vírgula duas posições para a frente. Por exemplo, 20 alunos representam 35%. 20 x 35 = 700. Portanto, 35% de 20 alunos são 7 alunas.",
-        "Para encontrar a parte complementar (porcentagem restante), subtraia a porcentagem conhecida de 100%. Por exemplo, se 35% são mulheres, então 100% - 35% = 65% são homens. Para calcular a quantidade, multiplique a porcentagem complementar pelo valor total e mova a vírgula duas posições para a frente. Assim, em 20 alunos, 65% são homens, o que equivale a 13 alunos.",
-    ]
-
-    return title, texto
+from utils.lines import *
+from utils.cores import *
 
 
 def QnE():
-    x = input(" >> ").upper()
-    if x == "Q":
+    x = input(f"{y}>> {rt}").upper()
+    if x == "Q" or x == "1":
         return -1
-    elif x == "E":
+    elif x == "E" or x == "2":
         return 1
     elif x == "0":
         return 2
@@ -31,20 +22,18 @@ def biblioteca(title, texto):
         elif op >= len(texto):
             op = 0
 
-        header = " " * 4 + f"{title}" + " " * 4
-        overline = "‾" * len(header)
-        print(header, f"\n{overline}")
-
+        overline(title, "─", 4)
         print(texto[op], "\n")
+        underline(title, "─", 4)
 
         if op == 0:
-            print(f"{len(texto)}<<{op+1}>>{op+2}")
+            print(f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar")
 
         elif op == len(texto) - 1:
-            print(f"{op}<<{op+1}>>{1}")
+            print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar")
 
         else:
-            print(f"{op}<<{op+1}>>{op+2}")
+            print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar")
 
         x = QnE()
 

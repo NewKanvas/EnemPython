@@ -1,9 +1,9 @@
-from materias.matematica.matematica import *
+from materias.matematica import *
 
 
 def materias():
     title = "Materias"
     lista = {
-        "Matematica": matematica(),
+        "Matematica": matematica,
     }
     return title, lista

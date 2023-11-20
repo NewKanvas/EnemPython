@@ -1,0 +1,39 @@
+P ()
+E a²
+M x 
+D /
+A +
+S -
+
+
+PEMDAS: Uma Mnemônica para Lembrar a Ordem das Operações Matemáticas
+P: Parênteses (resolva as operações dentro dos parênteses primeiro)
+E: Expoentes (lidar com potenciação)
+MD: Multiplicação e Divisão (realizar essas operações da esquerda para a direita)
+AS: Adição e Subtração (realizar essas operações da esquerda para a direita)
+
+Macetes para Frações
+MMMC: Minimizar, Multiplicar, Multiplicar, Cancelar (simplificar frações)
+
+Macetes para Multiplicação Rápida por Números Específicos
+Dobrar e Meio: Multiplicar por 2 e depois dividir pela metade
+Três é o Mágico: Multiplicar por 3
+Nove dos Dedos: Usar os dedos para multiplicar por 9
+
+Macetes para Potenciação e Radiciação
+Potência de 2: Para elevar ao quadrado, multiplique o número por ele mesmo
+Raiz Quadrada: Encontrar a raiz quadrada é encontrar um número que, quando multiplicado por si mesmo, resulta no valor original
+
+Macetes para Regra de Sinais em Multiplicações e Divisões
+(+)(+) = (+)
+(-)(-) = (+)
+(+)(-) = (-)
+(-)(+) = (-)
+
+Macete para Lidar com Zeros à Direita em Multiplicações
+Contagem de Zeros: Ao multiplicar por números que terminam em zero, conte os zeros e adicione-os ao resultado.
+
+Macetes para Frações Decimais
+Converter para Fração: Coloque o número decimal sobre uma potência de 10 apropriada (por exemplo, 0,25 = 25/100 = 1/4)
+
+Espero que esses macetes ajudem a facilitar diversos tipos de cálculos!
