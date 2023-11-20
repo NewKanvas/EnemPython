@@ -19,7 +19,7 @@ def tuto():
     os.system("cls")
 
 
-def menu(title, lista):
+def menu2(title, lista):
     while True:
         header = " " * 4 + f"{title}" + " " * 4
         overline = "‾" * len(header)
@@ -33,6 +33,28 @@ def menu(title, lista):
 
         if x in range(len(lista)):
             biblioteca(*lista[list(lista.keys())[x]]())
+            os.system("cls")
+
+        else:
+            print("Invalid Option")
+        os.system("cls")
+
+
+def menu(title, lista):
+    while True:
+        header = " " * 4 + f"{title}" + " " * 4
+        overline = "‾" * len(header)
+
+        print(header, f"\n{overline}")
+
+        for i, op in enumerate(lista):
+            print(f"{i+1} - {op}")
+
+        x = int(input("\n>> ")) - 1
+
+        if x in range(len(lista)):
+            menu2(*lista[list(lista.keys())[x]]())
+            os.system("cls")
 
         else:
             print("Invalid Option")
