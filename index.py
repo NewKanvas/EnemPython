@@ -1,8 +1,8 @@
 from time import sleep
 import os
 from utils.biblioteca import *
-from utils.cores import *
 from materias.materias import *
+from utils.cores import *
 from utils.lines import *
 
 
@@ -14,12 +14,6 @@ def tuto():
     print("'Q' para retornar;")
     print("'0' para sair.\n")
     input(f"{y}Pressione Enter para continuar...{rt}")
-    os.system("cls")
-
-
-def invalid():
-    print(f"{r}Invalid Option{rt}")
-    sleep(1)
     os.system("cls")
 
 
