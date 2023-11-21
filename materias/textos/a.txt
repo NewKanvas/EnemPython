@@ -1,1 +1,20 @@
-vo mandar o mais chatinho q e ciencias da natureza e math. Quimica: estequiometria, reações quimicas, cadeias carbonicas,quimica organica e isomeria óptica. Biologia: botanica, ecologia, fisiologia animal, genetica, embriologia,parasitologia e virus. Fisica: termodinamica, eletrodinamica, ondas sonoras. Matematica: media moda e mediana, analise de gráficos, juros simples e composto, geometria espacial(cone cilindro esfera, circulo, setor circular), logaritmo, lógica, razão e proporção.
+vo mandar o mais chatinho q e ciencias da natureza e math. 
+Quimica: estequiometria, reações quimicas, cadeias carbonicas,quimica organica e isomeria óptica. 
+Biologia: botanica, ecologia, fisiologia animal, genetica, embriologia,parasitologia e virus. 
+Fisica: termodinamica, eletrodinamica, ondas sonoras. 
+Matematica: media moda e mediana, analise de gráficos, juros simples e composto, 
+geometria espacial(cone cilindro esfera, circulo, setor circular), logaritmo, lógica, razão e proporção.
+
+_______________________________
+Matérias:
+Matemática (Maestria: X)
+Português (Maestria: X)
+...
+
+
+Dentro da Matemática por exemplo:
+
+DashBoard:
+Cálculo Básico (X%)
+Porcentagem (X%)
+_______________________________
