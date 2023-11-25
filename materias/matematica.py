@@ -36,9 +36,11 @@ def porcentagem():
     x = random.randint(0, 101)
     y = random.randint(0, 101)
 
+    r_correta = (x * y) / 100
+
     quiz = {
-        f"{r}{x}%{rt} de {g}{y}{rt} é?": f"{x} X {y} = {x*y}\n{x*y}/{100} = {((x*y)/100):.2f}",
-        f"{g}{x}{rt} é quanto de {r}{y}%{rt}?": f"{x} X {y} = {x*y}\n{x*y}/{100} = {((x*y)/100):.2f}",
+        f"{r}{x}%{rt} de {g}{y}{rt} é?": f"{x} X {y} = {x*y}\n{x*y}/{100} = {(r_correta):.2f}",
+        f"{g}{x}{rt} é quanto de {r}{y}%{rt}?": f"{x} X {y} = {x*y}\n{x*y}/{100} = {(r_correta):.2f}",
     }
 
-    return title, texto, quiz, x, y
+    return title, texto, quiz, x, y, r_correta

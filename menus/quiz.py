@@ -3,10 +3,8 @@ import os
 from utils.lines import *
 
 
-def quiz_fun(title, perguntas, x, y):
+def quiz_fun(title, perguntas, x, y, r_correta):
     q1 = random.choice(list(perguntas.keys()))
-
-    r_correta = (x * y) / 100
 
     # Gere opções de resposta
     opcoes = [r_correta] + [
