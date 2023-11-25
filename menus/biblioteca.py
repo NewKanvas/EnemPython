@@ -15,7 +15,7 @@ def QnE():
         return 2
 
 
-def biblioteca(title, texto, quiz, x, y, r_correta):
+def biblioteca(title, texto, quiz, r_correta):
     op = 0
 
     while True:
@@ -43,6 +43,8 @@ def biblioteca(title, texto, quiz, x, y, r_correta):
 
         if o == 3:
             os.system("cls")
+            x = random.randint(0, 101)
+            y = random.randint(0, 101)
             quiz_fun(title, quiz, x, y, r_correta)
 
         if o == 2:
