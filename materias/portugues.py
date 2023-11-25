@@ -1,4 +1,4 @@
-from utils.cores import *
+from utils.lines import *
 
 # Biblioteca
 

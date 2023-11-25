@@ -1,6 +1,6 @@
 from materias.matematica import *
 from materias.portugues import *
-from utils.cores import *
+from utils.lines import *
 
 
 def materias():

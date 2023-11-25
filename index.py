@@ -1,9 +1,19 @@
 from time import sleep
 import os
-from utils.biblioteca import *
+from menus.biblioteca import *
 from materias.materias import *
-from utils.cores import *
+
 from utils.lines import *
+
+
+def QnE():
+    x = input(f"{y}>> {rt}").upper()
+    if x == "Q":
+        return -1
+    elif x == "E" or x == "2":
+        return 1
+    elif x == "0":
+        return 2
 
 
 def tuto():

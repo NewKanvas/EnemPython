@@ -1,6 +1,6 @@
 import os
 from utils.lines import *
-from utils.cores import *
+from menus.quiz import *
 
 
 def QnE():
@@ -9,11 +9,13 @@ def QnE():
         return -1
     elif x == "E" or x == "2":
         return 1
+    elif x == "R" or x == "3":
+        return 3
     elif x == "0":
         return 2
 
 
-def biblioteca(title, texto):
+def biblioteca(title, texto, quiz, x, y):
     op = 0
 
     while True:
@@ -27,20 +29,26 @@ def biblioteca(title, texto):
         underline(title, "─", 4)
 
         if op == 0:
-            print(f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar")
+            print(
+                f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar   3 - Quiz"
+            )
 
         elif op == len(texto) - 1:
-            print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar")
+            print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar   3 - Quiz")
 
         else:
-            print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar")
+            print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar   3 - Quiz")
 
-        x = QnE()
+        o = QnE()
 
-        if x == 2:
+        if o == 3:
+            os.system("cls")
+            quiz_fun(title, quiz, x, y)
+
+        if o == 2:
             break
 
-        op = op + x
+        op = op + o
         os.system("cls")
 
 
