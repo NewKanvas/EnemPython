@@ -7,9 +7,7 @@ def quiz_fun(title, perguntas, x, y, r_correta):
     q1 = random.choice(list(perguntas.keys()))
 
     # Gere opções de resposta
-    opcoes = [r_correta] + [
-        ((x * y) / 100) + random.uniform(-0.5, 5) for _ in range(1, 4)
-    ]
+    opcoes = [r_correta] + [r_correta + random.uniform(-0.5, 5) for _ in range(1, 4)]
 
     random.shuffle(opcoes)
 

@@ -15,7 +15,7 @@ def QnE():
         return 2
 
 
-def biblioteca(title, texto, quiz, r_correta):
+def biblioteca(title, texto, quiz, x, y, r_correta):
     op = 0
 
     while True:
