@@ -4,6 +4,15 @@ from menus.quiz import *
 
 # Biblioteca
 
+# criar uma função quiz e por ela numa lista com a outra frunção assim voce pode acessar a informaçoes e rodar o quiz
+# L = [porcentagem,qporcentagem]
+# f"{b}Porcentagem{rt}": L,
+"""
+if o == 3:
+            os.system("cls")
+            quiz_fun(L[1]) #Inicia a segunda função
+"""
+
 
 def matematica():
     title = f"{b}Matemática{rt}"
