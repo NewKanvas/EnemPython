@@ -21,6 +21,7 @@ def matematica():
         f"{b}Porcentagem{rt}": porcentagem,
         f"{r}Média{rt}": "media",
         f"{m}Logaritmo{rt}": "logaritmo",
+        f"{m}Fatorial{rt}": "fatorial",
     }
     return title, lista
 
