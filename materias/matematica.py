@@ -30,11 +30,10 @@ def porcentagem():
     return (title, texto, q)
 
 
-
 def quizporcentagem():
     title = f"{b}Porcentagem{rt}"
-    x = random.randint(0, 101)
-    y = random.randint(0, 101)
+    x = random.randint(1, 101)
+    y = random.randint(1, 101)
 
     r_correta = (x * y) / 100
 
@@ -53,19 +52,36 @@ def calculoBasico():
         f"{g}P: P{rt}arênteses (resolva as operações dentro dos {g}parênteses{rt} primeiro)\n{c}E: E{rt}xpoente (realize as operações com {c}expoentes{rt})\n{r}M: M{rt}ultiplicação (efetue as {r}multiplicações{rt})\n{r}D: D{rt}ivisão (faça as {r}divisões{rt})\n{m}A: A{rt}dição (realize as {m}adições{rt})\n{m}S: S{rt}ubtração (efetue as {m}subtrações){rt}\n",
         f"Macetes para Frações Decimais\nConverter para Fração: Coloque o número decimal sobre uma potência de 10 apropriada\n(por exemplo, 0,25 = 25/100 = 1/4)",
     ]
-    x = random.randint(0, 101)
-    y = random.randint(0, 101)
+    q = quizcbasico
 
-    r_corretaA = x + y
-    r_corretaM = x - y
-    r_corretaX = x * y
-    r_corretaD = x / y
+    return (title, texto, q)
+
+
+def quizcbasico():
+    title = f"{g}Cálculo Básico{rt}"
+
+    x = round(random.uniform(1, 101), 2)
+    y = round(random.uniform(1, 101), 2)
+
+    operadores = ["+", "-", "*", "/"]
+    operador = random.choice(operadores)
+
+    def calcular(x, y, operador):
+        if operador == "+":
+            r_correta = x + y
+        elif operador == "-":
+            r_correta = x - y
+        elif operador == "*":
+            r_correta = x * y
+        elif operador == "/":
+            r_correta = x / y
+
+        return r_correta, operador
+
+    r_correta, operador = calcular(x, y, operador)
 
     quiz = {
-        f"{r}{x}{rt} + {g}{y}{rt} é?": f"{x} + {y} = {r_corretaA}\n",
-        f"{r}{x}{rt} - {g}{y}{rt} é?": f"{x} - {y} = {r_corretaM}\n",
-        f"{r}{x}{rt} x {g}{y}{rt} é?": f"{x} x {y} = {r_corretaX}\n",
-        f"{r}{x}{rt} / {g}{y}{rt} é?": f"{x} / {y} = {r_corretaX}\n",
+        f"{r}{x}{rt} {operador} {g}{y}{rt} é?": f"{r}{x}{rt} {operador} {g}{y}{rt} = {r_correta}",
     }
 
-    return title, texto, quiz, x, y, r_correta
+    return title, quiz, x, y, r_correta
