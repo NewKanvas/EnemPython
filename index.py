@@ -27,12 +27,12 @@ def tuto():
     os.system("cls")
 
 
-def submenu(title, lista):
+def submenu(title, data):
     while True:
         os.system("cls")
         overline(title, "─", 4)
 
-        for i, op in enumerate(lista):
+        for i, op in enumerate(data):
             print(f"{i+1} - {op}")
 
         underline(title, "─", 4)
@@ -43,20 +43,20 @@ def submenu(title, lista):
         if x == -1:
             break
 
-        if x in range(len(lista)):
+        if x in range(len(data)):
             os.system("cls")
-            biblioteca(*lista[list(lista.keys())[x]]())
+            biblioteca(*data[list(data.keys())[x]]())
 
         else:
             invalid()
 
 
-def menu(title, lista):
+def menu(title, data):
     while True:
         os.system("cls")
         overline(title, "─", 4)
 
-        for i, op in enumerate(lista):
+        for i, op in enumerate(data):
             print(f"{i+1} - {op}")
 
         underline(title, "─", 4)
@@ -70,9 +70,9 @@ def menu(title, lista):
             os.system("cls")
             break
 
-        if x in range(len(lista)):
+        if x in range(len(data)):
             os.system("cls")
-            submenu(*lista[list(lista.keys())[x]]())
+            submenu(*data[list(data.keys())[x]]())
 
         else:
             invalid()

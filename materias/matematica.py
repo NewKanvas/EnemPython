@@ -2,33 +2,21 @@ from utils.lines import *
 import random
 from menus.quiz import *
 
-# Biblioteca
 
-# criar uma função quiz e por ela numa lista com a outra frunção assim voce pode acessar a informaçoes e rodar o quiz
-# L = [porcentagem,qporcentagem]
-# f"{b}Porcentagem{rt}": L,
-"""
-if o == 3:
-            os.system("cls")
-            quiz_fun(L[1]) #Inicia a segunda função
-"""
-
-
+# Dados
 def matematica():
     title = f"{b}Matemática{rt}"
-    lista = {
+    data = {
         f"{g}Cálculo Básico{rt}": calculoBasico,
         f"{b}Porcentagem{rt}": porcentagem,
         f"{r}Média{rt}": "media",
         f"{m}Logaritmo{rt}": "logaritmo",
         f"{m}Fatorial{rt}": "fatorial",
     }
-    return title, lista
+    return title, data
 
 
 # Assuntos
-
-
 def porcentagem():
     title = f"{b}Porcentagem{rt}"
     texto = [
@@ -37,6 +25,14 @@ def porcentagem():
         f"{r}Para encontrar o valor original{rt} de um numero com aumento em porcentagem.\n\n{r}[Valor com aumento]{g}/{r}(100+x%){rt}\n\nExemplo:\nSe um trabalhador tivesse {g}7% de aumento{rt} do seu {r}salario atual{rt} receberia {b}R$ 2.675,00{rt}.\n\n2675/(100+7)\n2675/107 = 2500\nValor do salario atual = 2500",
     ]
 
+    q = quizporcentagem
+
+    return (title, texto, q)
+
+
+
+def quizporcentagem():
+    title = f"{b}Porcentagem{rt}"
     x = random.randint(0, 101)
     y = random.randint(0, 101)
 
@@ -47,7 +43,7 @@ def porcentagem():
         f"{g}{x}{rt} é quanto de {r}{y}%{rt}?": f"{x} X {y} = {x*y}\n{x*y}/{100} = {(r_correta):.2f}",
     }
 
-    return (title, texto, quiz, x, y, r_correta)
+    return (title, quiz, x, y, r_correta)
 
 
 ####

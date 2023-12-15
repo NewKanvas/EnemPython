@@ -5,8 +5,8 @@ from utils.lines import *
 
 def materias():
     title = "Materias"
-    lista = {
+    data = {
         f"{b}Matemática{rt}": matematica,
         f"{g}Português{rt}": portugues,
     }
-    return title, lista
+    return title, data

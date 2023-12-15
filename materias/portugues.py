@@ -5,13 +5,13 @@ from utils.lines import *
 
 def portugues():
     title = f"{g}Português{rt}"
-    lista = {
+    data = {
         f"{g}Gramática Básica{rt}": gramaticaBasica,
         f"{b}Interpretação de Texto{rt}": interpretacaoTexto,
         f"{r}Redação{rt}": "redacao",
         f"{m}Literatura{rt}": "literatura",
     }
-    return title, lista
+    return title, data
 
 
 # Assuntos

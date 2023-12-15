@@ -13,9 +13,11 @@ def QnE():
         return 3
     elif x == "0":
         return 2
+    elif x == "4":  # Adicione uma opção para iniciar o quiz diretamente
+        return 4
 
 
-def biblioteca(title, texto, quiz, x, y, r_correta):
+def biblioteca(title, texto, q):
     op = 0
 
     while True:
@@ -43,7 +45,7 @@ def biblioteca(title, texto, quiz, x, y, r_correta):
 
         if o == 3:
             os.system("cls")
-            quiz_fun(title, quiz, x, y, r_correta)
+            quiz_fun(*q())
 
         if o == 2:
             break

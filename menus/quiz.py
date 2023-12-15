@@ -3,8 +3,9 @@ import os
 from utils.lines import *
 
 
-def quiz_fun(title, perguntas, x, y, r_correta):
-    q1 = random.choice(list(perguntas.keys()))
+
+def quiz_fun(title, quiz, x, y, r_correta):
+    q1 = random.choice(list(quiz.keys()))
 
     # Gere opções de resposta
     opcoes = [r_correta] + [r_correta + random.uniform(-0.5, 5) for _ in range(1, 4)]
@@ -23,12 +24,12 @@ def quiz_fun(title, perguntas, x, y, r_correta):
 
     if int(resp) == opcoes.index(r_correta) + 1:
         print("\n✅ Correto")
-        print(perguntas[q1])
+        print(quiz[q1])
         input(f"{y}Pressione Enter para continuar...{rt}")
         os.system("cls")
 
     else:
         print("\n❌ Incorreto")
-        print(perguntas[q1])
+        print(quiz[q1])
         input(f"{y}Pressione Enter para continuar...{rt}")
         os.system("cls")
