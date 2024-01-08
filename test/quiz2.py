@@ -53,8 +53,7 @@ def calcular(x, y, operador):
 
 
 resp2 = calcular(x, y, operador)
-
-perg2 = f"{r}{x}{rt} {operador} {g}{y}{rt} é?"
+perg2 = f"Quanto é {r}{x}{rt} {operador} {g}{y}{rt}?"
 
 # Função
 
@@ -89,20 +88,19 @@ def quiz(perg, resp, falsas):
             print(f"{i} - {opcao:.2f}")
 
     # Corretor
-    """
     op = input(">> ")
 
     if int(op) == opcoes.index(resp) + 1:
         print("\n✅ Correto")
         print(f"Resposta correta é:\n{resp}")
-        input(f"{y}Pressione Enter para continuar...{rt}")
+        input(f"{g}Pressione Enter para continuar...{rt}")
         os.system("cls")
 
     else:
         print("\n❌ Incorreto")
         print(f"Resposta correta é:\n{resp}")
-        input(f"{y}Pressione Enter para continuar...{rt}")
-        os.system("cls")"""
+        input(f"{r}Pressione Enter para continuar...{rt}")
+        os.system("cls")
 
 
 # Teste texto
