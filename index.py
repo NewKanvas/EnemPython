@@ -60,7 +60,7 @@ def menu(title, data):
             print(f"{i+1} - {op}")
 
         underline(title, "─", 4)
-        print("\n0 - Voltar")
+        print("\n0 - Sair")
 
         x = int(input(f"{y}>> {rt}")) - 1
 
