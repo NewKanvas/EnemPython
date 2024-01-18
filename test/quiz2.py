@@ -14,46 +14,52 @@ rt = "\033[0m"
 
 # Gerando perguntas
 
+
 # Perguta texto
-perg1 = "pergunta 1"
-resp1 = "respcorreta"
-falsas1 = [
-    "resp1",
-    "resp2",
-    "resp3",
-    "resp4",
-    "resp5",
-    "resp6",
-    "resp7",
-    "resp8",
-]
+def quiztext():
+    perg1 = "pergunta 1"
+    resp1 = "respcorreta"
+    falsas1 = [
+        "resp1",
+        "resp2",
+        "resp3",
+        "resp4",
+        "resp5",
+        "resp6",
+        "resp7",
+        "resp8",
+    ]
+    return (perg1, resp1, falsas1)
+
 
 # Pergunta Calculo Basico
 
+
 # Gerar 2 valores
-x = round(random.uniform(1, 101))
-y = round(random.uniform(1, 101))
+def quizmat():
+    x = round(random.uniform(1, 101))
+    y = round(random.uniform(1, 101))
 
-# Gera o tipo de calculo
-operadores = ["+", "-", "*", "/"]
-operador = random.choice(operadores)
+    # Gera o tipo de calculo
+    operadores = ["+", "-", "*", "/"]
+    operador = random.choice(operadores)
 
+    def calcular(x, y, operador):
+        if operador == "+":
+            resp = x + y
+        elif operador == "-":
+            resp = x - y
+        elif operador == "*":
+            resp = x * y
+        elif operador == "/":
+            resp = x / y
 
-def calcular(x, y, operador):
-    if operador == "+":
-        resp = x + y
-    elif operador == "-":
-        resp = x - y
-    elif operador == "*":
-        resp = x * y
-    elif operador == "/":
-        resp = x / y
+        return resp
 
-    return resp
+    resp2 = calcular(x, y, operador)
+    perg2 = f"Quanto é {r}{x}{rt} {operador} {g}{y}{rt}?"
+    return (perg2, resp2, "_")
 
-
-resp2 = calcular(x, y, operador)
-perg2 = f"Quanto é {r}{x}{rt} {operador} {g}{y}{rt}?"
 
 # Função
 
@@ -104,7 +110,7 @@ def quiz(perg, resp, falsas):
 
 
 # Teste texto
-# quiz(perg1, resp1, falsas1)
+quiz(*quiztext())
 
 # Teste Calculo
-quiz(perg2, resp2, "_")
+quiz(*quizmat())

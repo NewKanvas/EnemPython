@@ -6,6 +6,7 @@ from materias.materias import *
 from utils.lines import *
 
 
+# Mecanismo de filtragem de resposta do menu
 def QnE():
     x = input(f"{y}>> {rt}").upper()
     if x == "Q":
@@ -16,6 +17,7 @@ def QnE():
         return 2
 
 
+# Mesagem de tutorial
 def tuto():
     os.system("cls")
     print("Bem-vindo ao meu mapa mental de estudo.\n")
@@ -30,7 +32,7 @@ def tuto():
 def submenu(title, data):
     while True:
         os.system("cls")
-        overline(title, "─", 4)
+        overline(title, "─", 4)  #
 
         for i, op in enumerate(data):
             print(f"{i+1} - {op}")
