@@ -37,10 +37,11 @@ def quizp():
     z = random.randint(0, 1)  # Gerar 0 ou 1
 
     resp = (x * y) / 100
+    " {x} X {y} = {x*y}\n{x*y}/{100} = {(resp):.2f}"
 
     plist = {
-        0: f"{r}{x}%{rt} de {g}{y}{rt} é? {x} X {y} = {x*y}\n{x*y}/{100} = {(resp):.2f}",
-        1: f"{g}{x}{rt} é quanto de {r}{y}%{rt}? {x} X {y} = {x*y}\n{x*y}/{100} = {(resp):.2f}",
+        0: f"{r}{x}%{rt} de {g}{y}{rt} é?",
+        1: f"{g}{x}{rt} é quanto de {r}{y}%{rt}?",
     }
     perg = plist[z]
 
