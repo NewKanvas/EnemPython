@@ -17,20 +17,44 @@ def quiz_fun(perg, resp, falsas):
     # Verifica se a pergunta e de calculo (INTEIRO)
 
     if isinstance(resp, int):
-        opcoes = [resp] + [resp + random.randint(-5, 5) for _ in range(1, 4)]
-        random.shuffle(opcoes)
+        opcoes = [resp]
+        valores_n = []
+
+        while len(valores_n) < 3:
+            n = random.randint(-5, 5)
+            if n != 0 and n not in valores_n:
+                valores_n.append(n)
+
+        for n in valores_n:
+            opcoes.append(resp + n)
+            random.shuffle(opcoes)
 
         for i, opcao in enumerate(opcoes, start=1):
             print(f"{i} - {opcao}")
 
+        print(resp)
+        print(valores_n)
+
     # Verifica se a pergunta e de calculo (COM VIRGULA)
 
     if isinstance(resp, float):
-        opcoes = [resp] + [resp + random.uniform(-5, 5) for _ in range(1, 4)]
-        random.shuffle(opcoes)
+        opcoes = [resp]
+        valores_n = []
+
+        while len(valores_n) < 3:
+            n = random.randint(-5, 5)
+            if n != 0.0 and n not in valores_n:
+                valores_n.append(n)
+
+        for n in valores_n:
+            opcoes.append(resp + n)
+            random.shuffle(opcoes)
 
         for i, opcao in enumerate(opcoes, start=1):
-            print(f"{i} - {opcao:.2f}")
+            print(f"{i} - {opcao:.2}")
+
+        print(resp)
+        print(valores_n)
 
     # Corretor
     op = input(">> ")
