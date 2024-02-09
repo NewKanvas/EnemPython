@@ -20,38 +20,67 @@ def QnE():
 def biblioteca(title, texto, q):
     op = 0
 
-    while True:
-        if op < 0:
-            op = len(texto) - 1
-        elif op >= len(texto):
-            op = 0
+    if q != "_":
+        while True:
+            if op < 0:
+                op = len(texto) - 1
+            elif op >= len(texto):
+                op = 0
 
-        overline(title, "─", 4)
-        print(texto[op], "\n")
-        underline(title, "─", 4)
+            overline(title, "─", 4)
+            print(texto[op], "\n")
+            underline(title, "─", 4)
 
-        if op == 0:
-            print(
-                f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar   3 - Quiz"
-            )
+            if op == 0:
+                print(
+                    f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar   3 - Quiz"
+                )
 
-        elif op == len(texto) - 1:
-            print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar   3 - Quiz")
+            elif op == len(texto) - 1:
+                print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar   3 - Quiz")
 
-        else:
-            print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar   3 - Quiz")
+            else:
+                print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar   3 - Quiz")
 
-        o = QnE()
+            o = QnE()
 
-        if o == 3:
+            if o == 3:
+                os.system("cls")
+                quiz_fun(*q())
+
+            if o == 2:
+                break
+
+            op = op + o
             os.system("cls")
-            quiz_fun(*q())
 
-        if o == 2:
-            break
+    else:
+        while True:
+            if op < 0:
+                op = len(texto) - 1
+            elif op >= len(texto):
+                op = 0
 
-        op = op + o
-        os.system("cls")
+            overline(title, "─", 4)
+            print(texto[op], "\n")
+            underline(title, "─", 4)
+
+            if op == 0:
+                print(f"<< {len(texto)} | {m}{op+1}{rt} | {op+2} >>    0 - Voltar")
+
+            elif op == len(texto) - 1:
+                print(f"<< {op} | {m}{op+1}{rt} | {1} >>   0 - Voltar")
+
+            else:
+                print(f"{op} | {m}{op+1}{rt} | {op+2} >>   0 - Voltar")
+
+            o = QnE()
+
+            if o == 2:
+                break
+
+            op = op + o
+            os.system("cls")
 
 
 # biblioteca(*porcentagem())

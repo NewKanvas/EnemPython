@@ -25,7 +25,7 @@ def gramaticaBasica():
 
     q = "_"
 
-    return title, texto
+    return (title, texto, q)
 
 
 def interpretacaoTexto():
@@ -36,7 +36,7 @@ def interpretacaoTexto():
 
     q = "_"
 
-    return title, texto
+    return (title, texto, q)
 
 
 def concordanciaRegenciaVerbal():
@@ -45,26 +45,27 @@ def concordanciaRegenciaVerbal():
         f"{g}Concordância Verbal:{rt}\n\n"
         f"Concordância verbal se refere à relação entre sujeito e verbo em uma frase. Alguns pontos importantes incluem:\n\n"
         f"• Quando o sujeito é coletivo, o verbo fica sempre no singular.\n"
-        f"Exemplo: A multidão ultrapassou o limite.\n\n"
+        f"   Exemplo: A multidão ultrapassou o limite.\n\n"
         f"• Se o coletivo estiver especificado, o verbo pode ser conjugado no singular ou no plural.\n"
-        f"Exemplo: A multidão de fãs ultrapassou o limite.\n"
-        f"A multidão de fãs ultrapassaram o limite.\n\n"
+        f"   Exemplo: A multidão de fãs ultrapassou o limite.\n"
+        f"            A multidão de fãs ultrapassaram o limite.\n\n",
         f"{g}Regência Verbal:{rt}\n\n"
         f"Regência verbal diz respeito à relação entre o verbo e seus complementos. Aqui estão alguns pontos importantes sobre a transitividade verbal:\n\n"
         f"• Verbo Intransitivo: Não precisa de complemento para fazer sentido.\n"
-        f"Exemplo: Vovó morreu em pé.\n"
-        f"(Em pé só mostra o modo)\n\n"
+        f"   Exemplo: Vovó morreu em pé.\n"
+        f"            (Em pé só mostra o modo)\n\n",
         f"• Verbo Transitivo Direto (V.T.D): É aquele que o complemento não inicia com preposição.\n"
-        f"Exemplo: João comeu brigadeiro.\n"
-        f"(Comeu o quê? Brigadeiro [Objeto Direto])\n\n"
+        f"   Exemplo: João comeu brigadeiro.\n"
+        f"            (Comeu o quê? Brigadeiro [Objeto Direto])\n\n"
         f"• Verbo Transitivo Indireto (V.T.I): É aquele que o complemento inicia com preposição.\n"
-        f"Exemplo: João gosta de brigadeiro.\n"
-        f"(Gosta do quê? Gosta de brigadeiro [Objeto Indireto])\n\n"
+        f"   Exemplo: João gosta de brigadeiro.\n"
+        f"            (Gosta do quê? Gosta de brigadeiro [Objeto Indireto])\n\n"
         f"• Verbo Transitivo Direto e Indireto: Apresenta ambos os complementos verbais.\n"
-        f"Exemplo: João convidou os alunos para um churrasco.\n"
-        f"                       O.D     preposição     O.I\n\n"
+        f"   Exemplo: João convidou os alunos para um churrasco.\n"
+        f"                                  O.D     preposição     O.I\n\n",
         f"{g}Regência Nominal:{rt}\n\n"
-        f"Regência nominal diz respeito aos termos que completam o sentido do substantivo, adjetivo ou advérbio. Um ponto importante é conhecer as preposições essenciais, que são: 'a, ante, até, após, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás'.\n\n"
+        f"Regência nominal diz respeito aos termos que completam o sentido do substantivo, adjetivo ou advérbio. Um ponto importante é conhecer as preposições essenciais, "
+        f"que são: 'a, ante, até, após, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás'.\n\n",
     ]
 
     q = "_"
