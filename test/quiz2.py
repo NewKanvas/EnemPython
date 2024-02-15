@@ -15,21 +15,19 @@ rt = "\033[0m"
 # Gerando perguntas
 
 
-# Perguta texto
-def quiztext():
-    perg1 = "pergunta 1"
-    resp1 = "respcorreta"
-    falsas1 = [
-        "resp1",
-        "resp2",
-        "resp3",
-        "resp4",
-        "resp5",
-        "resp6",
-        "resp7",
-        "resp8",
-    ]
-    return (perg1, resp1, falsas1)
+def quiztext2():
+    perguntas = {
+        "pergunta A": {"respcorretaA": ["resp1A", "resp2A", "resp3A"]},
+        "pergunta B": {"respcorretaB": ["resp1B", "resp2B", "resp3B"]},
+        "pergunta C": {"respcorretaC": ["resp1C", "resp2C", "resp3C"]},
+        "pergunta D": {"respcorretaD": ["resp1D", "resp2D", "resp3D"]},
+    }
+
+    perg3 = random.choice(list(perguntas.keys()))
+    resp3 = list(perguntas[perg3].keys())[0]
+    falsas3 = perguntas[perg3][resp3]
+
+    return (perg3, resp3, falsas3)
 
 
 # Pergunta Calculo Basico
@@ -61,6 +59,21 @@ def quizmat():
     return (perg2, resp2, "_")
 
 
+def quiztext2():
+    perguntas = {
+        "pergunta A": {"respcorretaA": ["resp1A", "resp2A", "resp3A"]},
+        "pergunta B": {"respcorretaB": ["resp1B", "resp2B", "resp3B"]},
+        "pergunta C": {"respcorretaC": ["resp1C", "resp2C", "resp3C"]},
+        "pergunta D": {"respcorretaD": ["resp1D", "resp2D", "resp3D"]},
+    }
+
+    perg3 = random.choice(list(perguntas.keys()))
+    resp3 = list(perguntas[perg3].keys())[0]
+    falsas3 = perguntas[perg3][resp3]
+
+    return (perg3, resp3, falsas3)
+
+
 # Função
 
 
@@ -78,20 +91,44 @@ def quiz(perg, resp, falsas):
     # Verifica se a pergunta e de calculo (INTEIRO)
 
     if isinstance(resp, int):
-        opcoes = [resp] + [resp + random.randint(-5, 5) for _ in range(1, 4)]
-        random.shuffle(opcoes)
+        opcoes = [resp]
+        valores_n = []
+
+        while len(valores_n) < 3:
+            n = random.randint(-5, 5)
+            if n != 0 and n not in valores_n:
+                valores_n.append(n)
+
+        for n in valores_n:
+            opcoes.append(resp + n)
+            random.shuffle(opcoes)
 
         for i, opcao in enumerate(opcoes, start=1):
             print(f"{i} - {opcao}")
 
+        print(resp)
+        print(valores_n)
+
     # Verifica se a pergunta e de calculo (COM VIRGULA)
 
     if isinstance(resp, float):
-        opcoes = [resp] + [resp + random.uniform(-5, 5) for _ in range(1, 4)]
-        random.shuffle(opcoes)
+        opcoes = [resp]
+        valores_n = []
+
+        while len(valores_n) < 3:
+            n = random.randint(-5, 5)
+            if n != 0.0 and n not in valores_n:
+                valores_n.append(n)
+
+        for n in valores_n:
+            opcoes.append(resp + n)
+            random.shuffle(opcoes)
 
         for i, opcao in enumerate(opcoes, start=1):
-            print(f"{i} - {opcao:.2f}")
+            print(f"{i} - {opcao:.2}")
+
+        print(resp)
+        print(valores_n)
 
     # Corretor
     op = input(">> ")
@@ -110,7 +147,11 @@ def quiz(perg, resp, falsas):
 
 
 # Teste texto
-quiz(*quiztext())
+# quiz(*quiztext())
+
+# Teste texto Multiplos
+while True:
+    quiz(*quiztext2())
 
 # Teste Calculo
-quiz(*quizmat())
+# quiz(*quizmat())

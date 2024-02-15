@@ -7,10 +7,10 @@ def portugues():
     title = f"{g}Português{rt}"
     data = {
         f"{g}Gramática Básica{rt}": gramaticaBasica,
-        f"{b}Interpretação de Texto{rt}": interpretacaoTexto,
+        # f"{b}Interpretação de Texto{rt}": interpretacaoTexto,
         f"{y}Concordância e Regência Verbal{rt}": concordanciaRegenciaVerbal,
-        f"{r}Redação{rt}": "redacao",
-        f"{m}Literatura{rt}": "literatura",
+        # f"{r}Redação{rt}": "redacao",
+        # f"{m}Literatura{rt}": "literatura",
     }
     return title, data
 
@@ -71,9 +71,6 @@ def concordanciaRegenciaVerbal():
     q = "_"
 
     return (title, texto, q)
-
-
-# Quizzes
 
 
 def quizPort():

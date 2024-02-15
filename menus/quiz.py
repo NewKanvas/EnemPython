@@ -32,9 +32,6 @@ def quiz_fun(perg, resp, falsas):
         for i, opcao in enumerate(opcoes, start=1):
             print(f"{i} - {opcao}")
 
-        print(resp)
-        print(valores_n)
-
     # Verifica se a pergunta e de calculo (COM VIRGULA)
 
     if isinstance(resp, float):
@@ -52,9 +49,6 @@ def quiz_fun(perg, resp, falsas):
 
         for i, opcao in enumerate(opcoes, start=1):
             print(f"{i} - {opcao:.2}")
-
-        print(resp)
-        print(valores_n)
 
     # Corretor
     op = input(">> ")

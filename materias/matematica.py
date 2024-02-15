@@ -9,9 +9,9 @@ def matematica():
     data = {
         f"{g}Cálculo Básico{rt}": calculoBasico,
         f"{b}Porcentagem{rt}": porcentagem,
-        f"{r}Média{rt}": "media",
-        f"{m}Logaritmo{rt}": "logaritmo",
-        f"{m}Fatorial{rt}": "fatorial",
+        # f"{r}Média{rt}": "media",
+        # f"{m}Logaritmo{rt}": "logaritmo",
+        # f"{m}Fatorial{rt}": "fatorial",
     }
     return title, data
 
