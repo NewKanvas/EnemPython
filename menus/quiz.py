@@ -1,6 +1,7 @@
 import random
 import os
 from utils.lines import *
+import time
 
 
 def quiz_fun(perg, resp, falsas):
@@ -50,8 +51,20 @@ def quiz_fun(perg, resp, falsas):
         for i, opcao in enumerate(opcoes, start=1):
             print(f"{i} - {opcao:.2}")
 
-    # Corretor
+    # Repondendo
+
+    start_time = time.time()  # Registra o tempo antes da resposta
+
     op = input(">> ")
+
+    end_time = time.time()  # Registra o tempo depois da resposta
+    response_time_seconds = (
+        end_time - start_time
+    )  # Calcula o tempo de resposta em segundos
+    response_time_minutes = response_time_seconds / 60  # Converte para minutos
+
+    print(f"Tempo de resposta: {response_time_minutes:.2f} minutos")
+    print(f"Tempo médio por pergunta no ENEM tem de ser 2 minutos e 30 segundos")
 
     if int(op) == opcoes.index(resp) + 1:
         print("\n✅ Correto")
