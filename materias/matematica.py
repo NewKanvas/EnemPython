@@ -9,6 +9,7 @@ def matematica():
     data = {
         f"{g}Cálculo Básico{rt}": calculoBasico,
         f"{b}Porcentagem{rt}": porcentagem,
+        f"{y}Potência{rt}": potencia,
         # f"{r}Média{rt}": "media",
         # f"{m}Logaritmo{rt}": "logaritmo",
         # f"{m}Fatorial{rt}": "fatorial",
@@ -34,21 +35,17 @@ def quizp():
     # Gerar 2 valores
     x = random.randint(1, 101)
     y = random.randint(1, 101)
-    z = random.randint(0, 1)  # Gerar 0 ou 1
 
     resp = (x * y) / 100
-    " {x} X {y} = {x*y}\n{x*y}/{100} = {(resp):.2f}"
 
-    plist = {
-        0: f"{r}{x}%{rt} de {g}{y}{rt} é?",
-        1: f"{g}{x}{rt} é quanto de {r}{y}%{rt}?",
-    }
-    perg = plist[z]
+    perg = f"Quanto é {r}{x}%{rt} de {g}{y}{rt} é?"
 
     return (perg, resp, "_")
 
 
-####
+# Calculos Basicos
+
+
 def calculoBasico():
     title = f"{g}Cálculo Básico{rt}"
     texto = [
@@ -83,4 +80,35 @@ def quizmat():
 
     resp = calcular(x, y, operador)
     perg = f"Quanto é {r}{x}{rt} {operador} {g}{y}{rt}?"
+    return (perg, resp, "_")
+
+
+def potencia():
+    title = f"{g}Potência (Simples){rt}"
+    texto = [
+        f"{b}Potência{rt} é uma operação matemática que indica a multiplicação repetida de um número por si mesmo, um número específico de vezes. Ela é representada usando a notação de expoente, onde um número é elevado a uma certa potência.\n",
+        f"{g}A operação de exponenciação por quadrados repetidos{rt} é uma técnica eficiente para calcular potências inteiras de um número. Ela consiste em decompor o expoente em sua representação binária e usar essa representação para realizar multiplicações sucessivas e quadrados do número base. Cada dígito binário do expoente representa uma potência de 2, e ao calcular os quadrados repetidos, é possível obter o resultado da potência de forma mais rápida do que com a multiplicação direta.\n",
+        f"{y}Por exemplo, para calcular a^5{rt}, podemos decompor o expoente 5 em sua representação binária, que é 101. Então, ao realizar exponenciação por quadrados repetidos, começamos com a^1 = a, então a^2 = a * a, e a^4 = a^2 * a^2, e finalmente a^5 = a^4 * a. Esse método reduz o número de operações necessárias para calcular a potência, tornando-o mais eficiente.\n",
+        f"{r}A exponenciação por quadrados repetidos{rt} é especialmente útil em computação e matemática aplicada, onde o desempenho e a eficiência são importantes. Ao aproveitar a estrutura binária do expoente, podemos calcular potências de forma mais rápida e eficiente, economizando tempo e recursos computacionais.\n",
+        f"{m}Potências muito altas podem ser simplificadas da seguinte forma:{rt}\n"
+        f"1.01^12 = ??\n"
+        f"1.01^6 = 1.062\n"
+        f"Logo:\n"
+        f"(1.01^6)^2 = (1.062)^2\n"
+        f"1.01^12 = 1.062*1.062\n"
+        f"1.01^12 = 1.126724\n",
+    ]
+
+    q = quizpot
+
+    return (title, texto, q)
+
+
+def quizpot():
+    x = round(random.uniform(1, 101))
+    y = round(random.uniform(1, 5))
+
+    resp = x**y
+
+    perg = f"Quanto é {r}{x}{rt}^{g}{y}{rt}?"
     return (perg, resp, "_")

@@ -49,7 +49,7 @@ def quiz_fun(perg, resp, falsas):
             random.shuffle(opcoes)
 
         for i, opcao in enumerate(opcoes, start=1):
-            print(f"{i} - {opcao:.2}")
+            print(f"{i} - {opcao:.2f}")
 
     # Repondendo
 
@@ -68,12 +68,22 @@ def quiz_fun(perg, resp, falsas):
 
     if int(op) == opcoes.index(resp) + 1:
         print("\n✅ Correto")
-        print(f"Resposta correta é:\n{resp}")
+
+        if isinstance(resp, float):
+            print(f"Resposta correta é:\n{resp:.2f}")
+        else:
+            print(f"Resposta correta é:\n{resp}")
+
         input(f"{g}Pressione Enter para continuar...{rt}")
         os.system("cls")
 
     else:
         print("\n❌ Incorreto")
-        print(f"Resposta correta é:\n{resp}")
+
+        if isinstance(resp, float):
+            print(f"Resposta correta é:\n{resp:.2f}")
+        else:
+            print(f"Resposta correta é:\n{resp}")
+
         input(f"{r}Pressione Enter para continuar...{rt}")
         os.system("cls")
