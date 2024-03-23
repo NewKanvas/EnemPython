@@ -16,12 +16,12 @@ def mostrar_menu(opcoes):
     for i, opcao in enumerate(opcoes, start=1):
         # Verifica se é um dicionário
         if isinstance(opcao, dict):
-            nome_categoria = list(opcao.keys())[0]  # Extrair o nome da categoria
+            nome = list(opcao.keys())[0]  # Extrair o nome da categoria
 
         # Tratar como string caso não seja um dicionário
         else:
-            nome_categoria = str(opcao)
-        print(f"{i}. {nome_categoria}")
+            nome = str(opcao)
+        print(f"{i}. {nome}")
 
 
 # Mostrando as materias
@@ -45,7 +45,9 @@ while True:
     # Mostrando as categorias
     while True:
         os.system("cls")
-        print(materia_escolhida)
+        # Printando titulo
+        underline(materia_escolhida, "─", 4)
+        overline(materia_escolhida, "─", 4)
 
         mostrar_menu(categorias)
 
