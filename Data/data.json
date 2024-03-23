@@ -1,6 +1,54 @@
 {
-    "pergunta": "Soma",
-    "n1": "x-1-100",
-    "n2": "y-1-100",
-    "resposta": "n1+n2"
+    "Matematica": [
+        {
+            "Calculo Basico": [
+                {
+                    "pergunta": "Soma",
+                    "variaveis": ["x", "y"],
+                    "x": "1,100",
+                    "y": "1,100",
+                    "resposta": "x+y"
+                },
+                {
+                    "pergunta": "Subtração",
+                    "variaveis": ["x", "y"],
+                    "x": "1,100",
+                    "y": "1,100",
+                    "resposta": "x-y"
+                }
+            ]
+        },
+        {
+            "Porcentagem": [
+                {
+                    "pergunta": "Porcentagem",
+                    "variaveis": ["x", "y"],
+                    "x": "1,100",
+                    "y": "1,100",
+                    "resposta": "x * y / 100"
+                },
+                {
+                    "pergunta": "Porcentagem Avançada",
+                    "variaveis": ["x", "y"],
+                    "x": "1,100",
+                    "y": "1,100",
+                    "resposta": "x * y / 100"
+                }
+            ]
+        },
+        {
+            "Juros Compostos": [
+                {
+                    "pergunta": "Juros Compostos",
+                    "x": "1,100",
+                    "y": "1,100",
+                    "t": "1,100",
+                    "resposta": "x * (1 + y / 100) ** t"
+                }
+            ]
+        }
+    ],
+    "Portugues": [
+
+    ]
 }

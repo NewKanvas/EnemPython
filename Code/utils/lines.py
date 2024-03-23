@@ -26,6 +26,6 @@ def underline(title, symbol, size):
 
 
 def invalid():
-    print(f"{r}Invalid Option{rt}")
+    print(f"{r}Escolha inválida.{rt}")
     sleep(1)
     os.system("cls")
