@@ -3,7 +3,7 @@ import random
 
 
 # Carregar os dados do JSON (Teste)
-with open("LEARN-Prototype/Data/data.json", "r") as file:
+with open("LEARN-Prototype/Data/data.json", "r", encoding="utf-8") as file:
     dados = json.load(file)
 
 data = random.choice(dados["Matematica"][0]["Calculo Basico"])

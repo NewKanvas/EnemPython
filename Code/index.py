@@ -5,7 +5,7 @@ from utils.lines import *
 
 
 # Carregar os dados do JSON
-with open("LEARN-Prototype/Data/data.json", "r") as file:
+with open("LEARN-Prototype/Data/data.json", "r", encoding="utf-8") as file:
     dados = json.load(file)
 
 materias = list(dados.keys())
