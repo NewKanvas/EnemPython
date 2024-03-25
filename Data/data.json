@@ -3,7 +3,7 @@
         {
             "Calculo Basico": [
                 {
-                    "pergunta": "Soma",
+                    "pergunta": "Quanto é x + y?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -11,7 +11,7 @@
                     "resposta": "x+y"
                 },
                 {
-                    "pergunta": "Subtração",
+                    "pergunta": "Quanto é x - y?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -19,7 +19,7 @@
                     "resposta": "x-y"
                 },
                 {
-                    "pergunta": "Multiplicacao",
+                    "pergunta": "Quanto é x * y?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -27,7 +27,7 @@
                     "resposta": "x*y"
                 },
                 {
-                    "pergunta": "Divisao",
+                    "pergunta": "Quanto é x / y?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -39,7 +39,7 @@
         {
             "Porcentagem": [
                 {
-                    "pergunta": "Porcentagem",
+                    "pergunta": "Quanto é x% de y é?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -47,7 +47,7 @@
                     "resposta": "x * y / 100"
                 },
                 {
-                    "pergunta": "Porcentagem Avançada",
+                    "pergunta": "Quanto é x% de y é?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100"
@@ -59,7 +59,7 @@
         {
             "Juros Compostos": [
                 {
-                    "pergunta": "Juros Compostos",
+                    "pergunta": "Apliquei x num banco onde há uma taxa de juros de y% e um período de t meses, quanto terei ao final do período?",
                     "variaveis": {
                         "x": "1,100",
                         "y": "1,100",

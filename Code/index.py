@@ -1,7 +1,11 @@
 import json
 import os
+import random
 from time import sleep
 from utils.lines import *
+
+from quiz import quiz_fun
+from interpretador import interp
 
 
 # Carregar os dados do JSON
@@ -59,7 +63,13 @@ while True:
             invalid()
             continue
 
-        categoria_escolhida = categorias[escolha - 1]
-        # Aqui você pode fazer o que precisar com a categoria escolhida
-        print(f"Categoria escolhida: {categoria_escolhida}")
-        sleep(1)
+        categoria_escolhida = categorias[escolha - 1]  # Selecionando a categoria
+
+        # Procurar pela chave que contém uma lista de questões
+        for key, value in categoria_escolhida.items():
+            if isinstance(value, list):
+                questoes = value
+                break
+
+        questao_aleatoria = random.choice(questoes)
+        quiz_fun(*interp(questao_aleatoria))
