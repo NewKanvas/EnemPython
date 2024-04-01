@@ -5,12 +5,17 @@ import re
 from utils.lines import *
 from quiz import quiz_fun
 
-
-"""# Carregar os dados do JSON (Teste)
+"""
+# Carregar os dados do JSON (Teste)
 with open("LEARN-Prototype/Data/data.json", "r", encoding="utf-8") as file:
     dados = json.load(file)
 
-data = random.choice(dados["Matematica"][0]["Calculo Basico"])
+categoria_mate = random.choice(dados["Matemática"])
+pergunta_aleatoria = random.choice(
+    categoria_mate[next(iter(categoria_mate))]["perguntas"]
+)
+
+print(pergunta_aleatoria)
 """
 
 
@@ -24,13 +29,13 @@ def interp(data):
     variaveis = data["variaveis"]
     values = {}
 
-    for var, var_range in variaveis.items():  # pega cada variaveis e seu "valor"
-        var_range = list(
-            map(int, var_range.split(","))
-        )  # separa os parametros das variaveis
-        values[var] = random.randint(
-            var_range[0], var_range[1]
-        )  # gera um valor para cada variavel
+    for var, var_range in variaveis.items():
+        if "." in var_range:
+            var_range = list(map(float, var_range.split(",")))
+            values[var] = round(random.uniform(var_range[0], var_range[1]), 2)
+        else:
+            var_range = list(map(int, var_range.split(",")))
+            values[var] = random.randint(var_range[0], var_range[1])
 
     # Imprime os valores gerados (Debug)
     # for var, val in values.items():
@@ -63,4 +68,4 @@ def interp(data):
     return (pergunta, resultado, "_")
 
 
-# quiz_fun(*interp(data))
+# quiz_fun(*interp(pergunta_aleatoria))

@@ -1,76 +1,147 @@
 {
-    "Matematica": [
+    "Matemática": [
         {
-            "Calculo Basico": [
-                {
-                    "pergunta": "Quanto é x + y?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
+            "Calculo Basico": {
+                "texto": ["Texto informativo sobre calculo basico."],
+                "perguntas": [
+                    {
+                        "pergunta": "Quanto é x + y?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x+y"
                     },
-                    "resposta": "x+y"
-                },
-                {
-                    "pergunta": "Quanto é x - y?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
+                    {
+                        "pergunta": "Quanto é x - y?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x-y"
                     },
-                    "resposta": "x-y"
-                },
-                {
-                    "pergunta": "Quanto é x * y?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
+                    {
+                        "pergunta": "Quanto é x * y?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x*y"
                     },
-                    "resposta": "x*y"
-                },
-                {
-                    "pergunta": "Quanto é x / y?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
-                    },
-                    "resposta": "x/y"
-                }
-            ]
+                    {
+                        "pergunta": "Quanto é x / y?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x/y"
+                    }
+                 ]
+            }
         },
         {
-            "Porcentagem": [
-                {
-                    "pergunta": "Quanto é x% de y é?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
+            "Calculo com valores Decimais": {
+                "perguntas": [
+                    {
+                        "pergunta": "Quanto é x + y?",
+                        "variaveis": {
+                            "x": "1.0,100",
+                            "y": "1.0,100"
+                        },
+                        "resposta": "x+y"
                     },
-                    "resposta": "x * y / 100"
-                },
-                {
-                    "pergunta": "Quanto é x% de y é?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100"
+                    {
+                        "pergunta": "Quanto é x - y?",
+                        "variaveis": {
+                            "x": "1.0,100",
+                            "y": "1.0,100"
+                        },
+                        "resposta": "x-y"
                     },
-                    "resposta": "x * y / 100"
-                }
-            ]
+                    {
+                        "pergunta": "Quanto é x * y?",
+                        "variaveis": {
+                            "x": "1.0,100",
+                            "y": "1.0,100"
+                        },
+                        "resposta": "x*y"
+                    },
+                    {
+                        "pergunta": "Quanto é x / y?",
+                        "variaveis": {
+                            "x": "1.0,100",
+                            "y": "1.0,100"
+                        },
+                        "resposta": "x/y"
+                    }
+                ]
+            }
         },
         {
-            "Juros Compostos": [
-                {
-                    "pergunta": "Apliquei x num banco onde há uma taxa de juros de y% e um período de t meses, quanto terei ao final do período?",
-                    "variaveis": {
-                        "x": "1,100",
-                        "y": "1,100",
-                        "t": "1,100"
+            "Porcentagem": {
+                "perguntas": [
+                    {
+                        "pergunta": "Quanto é x% de y é?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x * y / 100"
                     },
-                    "resposta": "x * (1 + y / 100) ** t"
-                }
-            ]
+                    {
+                        "pergunta": "Quanto é x% de y é?",
+                        "variaveis": {
+                            "x": "1.0,100",
+                            "y": "1,100"
+                        },
+                        "resposta": "x * y / 100"
+                    }
+                ]
+            }
+        },
+        {
+            "Juros Compostos": {
+                "perguntas": [
+                    {
+                        "pergunta": "Apliquei x num banco onde há uma taxa de juros de y% e um período de t meses, quanto terei ao final do período?",
+                        "variaveis": {
+                            "x": "1,100",
+                            "y": "1.0,10",
+                            "t": "1,100"
+                        },
+                        "resposta": "x * (1 + y / 100) ** t"
+                    }
+                ]
+            }
         }
     ],
-    "Portugues": [
-
+    "Português": [
+        {
+            "Gramática Básica": {
+                "texto": [
+                    "C: Conjugação verbal (ajuste do verbo de acordo com o sujeito)",
+                    "A: Acentuação (uso correto de acentos gráficos)",
+                    "S: Substantivos (classes e flexões dos substantivos)",
+                    "O: Ortografia (regras de escrita correta)",
+                    "P: Pontuação (uso adequado dos sinais de pontuação)",
+                    "Macetes para Ortografia",
+                    "Regras Mnemônicas: Utilize frases ou palavras que ajudem a lembrar de regras ortográficas específicas, como 'Muito Antes Pouco Depois' para lembrar da ordem correta das letras 'M', 'A', 'P', e 'D' em algumas palavras."
+                ]
+            }
+        },
+        {
+            "Concordância e Regência Verbal": {
+                "texto": [
+                    "Concordância Verbal:",
+                    "Concordância verbal se refere à relação entre sujeito e verbo em uma frase. Alguns pontos importantes incluem:",
+                    "- Quando o sujeito é coletivo, o verbo fica sempre no singular.",
+                    "- Se o coletivo estiver especificado, o verbo pode ser conjugado no singular ou no plural.",
+                    "Regência Verbal:",
+                    "Regência verbal diz respeito à relação entre o verbo e seus complementos. Aqui estão alguns pontos importantes sobre a transitividade verbal:",
+                    "Regência Nominal:",
+                    "Regência nominal diz respeito aos termos que completam o sentido do substantivo, adjetivo ou advérbio. Um ponto importante é conhecer as preposições essenciais, que são: 'a, ante, até, após, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás'."
+                ]
+            }
+        }
     ]
 }

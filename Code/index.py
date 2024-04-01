@@ -3,8 +3,8 @@ import os
 import random
 from time import sleep
 from utils.lines import *
-
 from quiz import quiz_fun
+from library import *
 from interpretador import interp
 
 
@@ -64,12 +64,12 @@ while True:
             continue
 
         categoria_escolhida = categorias[escolha - 1]  # Selecionando a categoria
+        categoria_escolhida = list(categoria_escolhida.values())[
+            0
+        ]  # Acessando os valores do dicionário
 
-        # Procurar pela chave que contém uma lista de questões
-        for key, value in categoria_escolhida.items():
-            if isinstance(value, list):
-                questoes = value
-                break
-
-        questao_aleatoria = random.choice(questoes)
-        quiz_fun(*interp(questao_aleatoria))
+        if categoria_tem_texto(categoria_escolhida) == True:
+            library(categoria_escolhida)
+        else:
+            pergunta = random.choice(categoria_escolhida["perguntas"])
+            quiz_fun(*interp(pergunta))
