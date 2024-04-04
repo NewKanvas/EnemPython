@@ -2,7 +2,8 @@
     "Matemática": [
         {
             "Calculo Basico": {
-                "texto": ["Texto informativo sobre calculo basico."],
+                "titulo": ["", "titulo2"],
+                "texto": ["Texto informativo 1 sobre calculo basico.", "Texto de teste 2"],
                 "perguntas": [
                     {
                         "pergunta": "Quanto é x + y?",
@@ -118,13 +119,9 @@
     "Português": [
         {
             "Gramática Básica": {
+                "titulo":["","Macetes para Ortografia"],
                 "texto": [
-                    "C: Conjugação verbal (ajuste do verbo de acordo com o sujeito)",
-                    "A: Acentuação (uso correto de acentos gráficos)",
-                    "S: Substantivos (classes e flexões dos substantivos)",
-                    "O: Ortografia (regras de escrita correta)",
-                    "P: Pontuação (uso adequado dos sinais de pontuação)",
-                    "Macetes para Ortografia",
+                    "C: Conjugação verbal (ajuste do verbo de acordo com o sujeito)\nA: Acentuação (uso correto de acentos gráficos)\nS: Substantivos (classes e flexões dos substantivos)\nO: Ortografia (regras de escrita correta)\nP: Pontuação (uso adequado dos sinais de pontuação)",
                     "Regras Mnemônicas: Utilize frases ou palavras que ajudem a lembrar de regras ortográficas específicas, como 'Muito Antes Pouco Depois' para lembrar da ordem correta das letras 'M', 'A', 'P', e 'D' em algumas palavras."
                 ]
             }
@@ -140,8 +137,58 @@
                     "Regência verbal diz respeito à relação entre o verbo e seus complementos. Aqui estão alguns pontos importantes sobre a transitividade verbal:",
                     "Regência Nominal:",
                     "Regência nominal diz respeito aos termos que completam o sentido do substantivo, adjetivo ou advérbio. Um ponto importante é conhecer as preposições essenciais, que são: 'a, ante, até, após, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás'."
+                ],
+                "perguntas": [
+                    {
+                        "pergunta": "Quando o verbo deve concordar com o sujeito em número e pessoa?",
+                        "resposta": "Quando o sujeito é singular.",
+                        "falsa": [
+                            "Quando o sujeito é plural.",
+                            "Quando o coletivo não estiver especificado."
+                        ]
+                    },
+                    {
+                        "pergunta": "Qual é a regra de concordância verbal para sujeitos coletivos?",
+                        "resposta": "O verbo fica sempre no singular.",
+                        "falsa": [
+                            "O verbo fica sempre no plural.",
+                            "O verbo pode concordar no singular ou no plural, independentemente de estar especificado."
+                        ]
+                    },
+                    {
+                        "pergunta": "Quando o verbo pode concordar no singular ou no plural em relação a um sujeito coletivo?",
+                        "resposta": "Quando o coletivo estiver especificado.",
+                        "falsa": [
+                            "Quando o coletivo não estiver especificado.",
+                            "Quando o sujeito é singular."
+                        ]
+                    },
+                    {
+                        "pergunta": "O que é regência verbal?",
+                        "resposta": "É a relação entre o verbo e seus complementos.",
+                        "falsa": [
+                            "É a relação entre o sujeito e o predicado.",
+                            "É a relação entre o sujeito e o objeto direto.",
+                            "É a relação entre o sujeito e o objeto indireto."
+                        ]
+                    },
+                    {
+                        "pergunta": "O que é regência nominal?",
+                        "resposta": "É a relação entre os termos que completam o sentido do substantivo, adjetivo ou advérbio.",
+                        "falsa": [
+                            "É a relação entre os termos que compõem o sujeito da frase.",
+                            "É a relação entre os termos que compõem o predicado da frase.",
+                            "É a relação entre os termos que compõem o objeto direto da frase."
+                        ]
+                    }
+                ],
+                "falsas": [
+                    "É a relação entre o sujeito e o predicado.",
+                    "É a relação entre o sujeito e o objeto direto.",
+                    "É a relação entre o sujeito e o objeto indireto."
                 ]
             }
         }
+        
     ]
 }

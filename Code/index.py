@@ -64,12 +64,14 @@ while True:
             continue
 
         categoria_escolhida = categorias[escolha - 1]  # Selecionando a categoria
-        categoria_escolhida = list(categoria_escolhida.values())[
+        conteudo = list(categoria_escolhida.values())[
             0
         ]  # Acessando os valores do dicionário
 
-        if categoria_tem_texto(categoria_escolhida) == True:
-            library(categoria_escolhida)
+        # print(f"Variável 'categoria_escolhida': {categoria_escolhida}")
+
+        if categoria_tem_texto(conteudo) == True:
+            library(conteudo, list(categoria_escolhida.keys())[0])
         else:
-            pergunta = random.choice(categoria_escolhida["perguntas"])
-            quiz_fun(*interp(pergunta))
+            pergunta = random.choice(conteudo["perguntas"])
+            quiz_fun(*interp(pergunta, conteudo))

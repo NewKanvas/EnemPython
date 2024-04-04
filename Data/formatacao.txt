@@ -1,0 +1,19 @@
+Siga esse padrão para fazer novas materias e/ou assunstos:
+Substitua as palvras pelos seus equivalentes:
+(*): Obrigatorio
+
+Materia*
+Categoria*
+
+Titulo1
+Texto1
+
+Titulo2
+Texto2
+
+[...]
+
+pergunta1
+x = 1,100 (Numero inteiro de 1 a 100)
+y = 1.0,100 (Numero decimal de 1 a 100)
+Operação: x - y (x)^2

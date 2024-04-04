@@ -47,11 +47,9 @@ print(categoria_tem_texto(mat2))  # False
 """
 
 
-def library(data):
+def library(data, categoria):
     os.system("cls")
     index = 0
-    title = "Texto"
-    text = "\n".join(data["texto"])
 
     # Verifica se há perguntas disponíveis
     if "perguntas" in data:
@@ -65,8 +63,17 @@ def library(data):
         elif index >= len(data["texto"]):
             index = 0
 
+        if "titulo" in data and index < len(data["titulo"]):
+            title = data["titulo"][index]
+        else:
+            title = ""
+        if not title:  # Verifica se o título está vazio
+            title = categoria
+
+        text = data["texto"][index]
+
         overline(title, "─", 4)
-        print(text[index:])
+        print(text)
         underline(title, "─", 4)
 
         if index == 0:
@@ -100,7 +107,7 @@ def library(data):
 
         if o == 0 and has_questions:
             pergunta = random.choice(data["perguntas"])
-            quiz_fun(*interp(pergunta))
+            quiz_fun(*interp(pergunta, data))
             pass
 
         index = index + o

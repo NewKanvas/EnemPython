@@ -5,6 +5,7 @@ from utils.lines import *
 
 
 def quiz_fun(perg, resp, falsas):
+    os.system("cls")
     print(perg)
 
     # Verifica se a pergunta e de texto

@@ -10,7 +10,7 @@ from quiz import quiz_fun
 with open("LEARN-Prototype/Data/data.json", "r", encoding="utf-8") as file:
     dados = json.load(file)
 
-categoria_mate = random.choice(dados["Matemática"])
+categoria_mate = dados["Português"][1]
 pergunta_aleatoria = random.choice(
     categoria_mate[next(iter(categoria_mate))]["perguntas"]
 )
@@ -20,52 +20,62 @@ print(pergunta_aleatoria)
 
 
 # Função do interpetrador
-def interp(data):
-    os.system("cls")
+def interp(data, dataAcima):
+    # os.system("cls")
     # print(data)  # (Debug)
     print("\n\n")
 
-    # Gerando valores para variaveis
-    variaveis = data["variaveis"]
-    values = {}
+    if "variaveis" in data:
+        variaveis = data["variaveis"]
+        values = {}
 
-    for var, var_range in variaveis.items():
-        if "." in var_range:
-            var_range = list(map(float, var_range.split(",")))
-            values[var] = round(random.uniform(var_range[0], var_range[1]), 2)
-        else:
-            var_range = list(map(int, var_range.split(",")))
-            values[var] = random.randint(var_range[0], var_range[1])
+        for var, var_range in variaveis.items():
+            if "." in var_range:
+                var_range = list(map(float, var_range.split(",")))
+                values[var] = round(random.uniform(var_range[0], var_range[1]), 2)
+            else:
+                var_range = list(map(int, var_range.split(",")))
+                values[var] = random.randint(var_range[0], var_range[1])
 
-    # Imprime os valores gerados (Debug)
-    # for var, val in values.items():
-    #    print(f"Valor de {var}: {val}")
+        # Calculando resposta
+        resposta = data["resposta"]
+        for var, val in values.items():
+            resposta = resposta.replace(var, str(val))
+        resultado = eval(resposta)  # Gerando resultado com base na resposta
 
-    # Calculando resposta
-    resposta = data["resposta"]
-    for var, val in values.items():
-        resposta = resposta.replace(var, str(val))
-    resultado = eval(resposta)  # Gerando resultado com base na resposta
+        # Definindo sequencia de cores:
+        # colors = [r, b, g, y, c, m]
 
-    # Definindo sequencia de cores:
-    # colors = [r, b, g, y, c, m]
+        # Formantado pergunta
+        pergunta = data["pergunta"]
+        for var, val in values.items():
+            pergunta = re.sub(
+                rf"\b{re.escape(var)}\b", str(val), pergunta
+            )  # Pegando a variavel separada por espaços
 
-    # Formantado pergunta
-    pergunta = data["pergunta"]
-    for var, val in values.items():
-        pergunta = re.sub(
-            rf"\b{re.escape(var)}\b", str(val), pergunta
-        )  # Pegando a variavel separada por espaços
+            # Gerando cor aleatoria para os valores
+            pergunta = pergunta.replace(
+                str(val), f"\033[{random.randint(91, 96)}m {str(val)} \033[0m"
+            )
 
-        # Gerando cor aleatoria para os valores
-        pergunta = pergunta.replace(
-            str(val), f"\033[{random.randint(91, 96)}m {str(val)} \033[0m"
-        )
+        return (pergunta, resultado, "_")
 
-    # print(pergunta)  # Debug
-    # print(f"Resposta calculada: {resultado}")  # Debug
+    elif "falsa" in data:
+        pergunta = data["pergunta"]
+        resposta = data["resposta"]
+        falsas = data["falsa"]
 
-    return (pergunta, resultado, "_")
+        # print(f"{r}Pergunta:{rt} {pergunta}",f"{r}Repostas:{rt} {resposta}",f"{r}Falsas:{rt} {falsas}",)
+
+        if len(falsas) < 3:
+            banco_falsas = dataAcima["falsas"]
+            falsas = falsas + banco_falsas
+            pass
+
+        return (pergunta, resposta, falsas)
 
 
 # quiz_fun(*interp(pergunta_aleatoria))
+# quiz_fun(perg, resp, falsas)
+
+# print(interp(pergunta_aleatoria))
